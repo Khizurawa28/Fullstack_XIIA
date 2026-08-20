@@ -1,0 +1,21 @@
+
+services:
+  # 1. Layanan Backend API Pemroses Model AI
+  backend_service:
+    build: ./backend
+    container_name: kontainer_backend_ai
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+
+  # 2. Layanan Frontend Web Streamlit
+  frontend_service:
+    build: ./frontend
+    container_name: kontainer_frontend_web
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://backend_service:8000
+    depends_on:
+      - backend_service
