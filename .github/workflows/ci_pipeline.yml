@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: 1. Mengambil Kode Repositori (Checkout)
-      uses: action/Checkout@v4
+      uses: actions/Checkout@v4
 
     - name: 2. Menyiapkan Environment Python 3.10
       uses: action/setup-python@v5
