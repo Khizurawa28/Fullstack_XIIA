@@ -16,7 +16,7 @@ jobs:
       uses: actions/Checkout@v4
 
     - name: 2. Menyiapkan Environment Python 3.10
-      uses: action/setup-python@v5
+      uses: actionsg/setup-python@v5
       with:
         python-version: "3.10"
 
